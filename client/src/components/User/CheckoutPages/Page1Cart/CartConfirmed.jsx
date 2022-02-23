@@ -29,9 +29,6 @@ let valorTotal = valor.reduce(function(a, b){
   return a + b;
 }, 0);
 
-
-
-
 let checkout = {clientId: client, itemsHard: itemsHard, valor: valorTotal}
 console.log("ESTO BUSCO YO",checkout)
     

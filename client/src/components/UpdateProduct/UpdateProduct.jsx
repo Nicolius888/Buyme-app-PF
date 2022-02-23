@@ -12,8 +12,8 @@ function validate(input) {
   if (input.name.length < 5) {
     errors.name = "Name must have at least 5 characters";
   }
-  if (input.name.length > 30) {
-    errors.name = "Name must have at most 30 characters";
+  if (input.name.length > 50) {
+    errors.name = "Name must have at most 50 characters";
   }
   if (!input.name) {
     errors.name = "Name is required";
@@ -55,9 +55,10 @@ function validate(input) {
     errors.price = "Price is required";
   }
 
-  if (input.offerPrice.length > 0 && input.offerPrice < 0) {
+  if (input.offerPrice && input.offerPrice.length > 0 && input.offerPrice < 0) {
     errors.offerPrice = "Positive numbers only";
   }
+
   if (!input.offerPrice) {
     errors.offerPrice = "Price is required";
   }
